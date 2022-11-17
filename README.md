@@ -1,9 +1,7 @@
 # Transportation Is Supportive 
-This repository contains data and methodology to support a project that measures the transportation system’s support of a high quality of life in the 13 Metropolitan Planning Organization (MPO) regions of Massachusetts.
-## Purpose
-**TBD** \ The Transportation Is Supportive (TIS) Score is a relative measure of the transportation system’s support of a high quality of life. A higher TIS denotes a transportation system that supports a higher quality of life. The geography is census block groups (ACS 2020) and unit of analysis is a combined index score.
+This repository contains data and methodology to support a project that analyzes the impact of transportation across the 13 Metropolitan Planning Organizations (MPO) resions. The Transportation Is Supportive (TIS) Score is a relative measure of the transportation system’s support of a high quality of life. A higher TIS denotes a transportation system that supports a higher quality of life. The geography is census block groups (ACS 2020) and unit of analysis is a combined index score.
 ## Prepare Data
-TIS is based on ten indicators that represent five categories of transportation impact: infrastructure, safety, accessibility, affordability, and environment. 
+For this analysis, we determined ten indicators that represent five categories of transportation impact: infrastructure, safety, accessibility, affordability, and environment. 
 ### Infrastructure
 This project measures infrastructure in three ways: bicycle facility coverage, sidewalk coverage, and high potential for everyday walking. Data are pulled from the [2021 Road Inventory](https://massdot.maps.arcgis.com/home/item.html?id=342e8400ba3340c1bf5bf2b429ad8294#overview) and the [Potential for Everyday Walking](https://geo-massdot.opendata.arcgis.com/datasets/MassDOT::potential-for-everyday-biking-2022-update/about) layer containing latent demand for active-mode trip making.
 - **Bicycle Facility Coverage**: Road segments were attributed to a block group, total milage per block group was calculated, and road segments were filtered by facility type (12). The percentage of road miles with bicycle facilities is calculated per block group by dividing road miles with bike facilities by total road miles. 
