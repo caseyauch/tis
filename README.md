@@ -40,4 +40,4 @@ The following steps are implemented in [``TIS_build_index.R``](/analysis/TIS_bui
 5. Sum five category scores = TIS Score
 
 ## Build Dashboard
-To visualize the results, we developed a Tableau dashboard hosted here. 
+To visualize the results, we developed a Tableau dashboard hosted [here](https://public.tableau.com/app/profile/casey.auch/viz/BeyondMobilityDraft3/TISDashboard). 
