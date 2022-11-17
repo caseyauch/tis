@@ -27,7 +27,7 @@ This project measures transportation impacts on the environment by vehicle-miles
 ## Process using Conveyal
 Access to jobs and destinations was calculated with Conveyal's regional analysis for a typical weekday in 2022. 
 - **Origins/Destinations**: Origins used for this analysis are the center points of a rectangular grid covering the state (Conveyal's default option). Critical destinations (CDs) were uploaded to Conveyal as free form points. 
-- **Network**: The transportation network in Conveyal was updated using an OpenStreetMap extract and 2022 GTFS files for the MBTA and RTAs. 
+- **Network**: The transportation network in Conveyal was updated using an OpenStreetMap extract and 2022 GTFS files for the MBTA and RTAs (located [here](https://github.com/caseyauch/tis/tree/main/analysis/conveyal))
 - **Analysis Settings**: Analyses used the following settings: access mode was car, transit modes were all, egress mode was walking, and boundary was the entire region. The analysis outputs were saved as .tiff files.
 
 Using half-mile buffers around each block group, the sum of CDs and mean number of jobs accessible by block group were calculated using ArcGIS's raster analysis tool "Zonal Statistics."
