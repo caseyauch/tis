@@ -10,7 +10,7 @@ This project measures infrastructure in three ways: bicycle facility coverage, s
 - **Sidewalk Coverage**: Road segments were attributed to a block group, total milage per block group was calculated, and road segments were filtered by left or right sidewalk widths (4+). The percentage of road miles with sidewalks is calculated per block group by dividing road miles with sidewalks by total road miles. 
 - **Potential for Everyday Walking**: Road segments were attributed to a block group and filtered by potential (high) and totaled. 
 ### Safety
-This project measures safety in two ways: number of fatal and serious injury crashes and relative roadway risk. 2019-2020 crash data are pulled from [MassDOT IMPACT Portal](https://apps.impact.dot.state.ma.us/cdv/). MPO rankings for bicycle safety, pedestrian safety, roadway departure, and speed aggression risk are pulled from [MassDOT Impact Open Data](https://massdot-impact-crashes-vhb.opendata.arcgis.com/). 
+This project measures safety in two ways: number of fatal and serious injury crashes and relative roadway risk. 2019-2020 crash data are pulled from [MassDOT IMPACT Portal](https://apps.impact.dot.state.ma.us/cdv/). 2022 MPO rankings for bicycle safety, pedestrian safety, roadway departure, and speed aggression risk are pulled from [MassDOT Impact Open Data](https://massdot-impact-crashes-vhb.opendata.arcgis.com/). 
 - **Fatal and Serious Injury Crashes**: Crash locations were attributed to a block group and totaled. 
 - **Roadway Risk**: Road segments were attributed to a block group and total milage was calculated. Mileage from all four risk categories was combined to capture total risk miles. The roadway risk ratio is calculated per block group by dividing total risk miles by total road miles. 
 ### Accessibility 
@@ -31,8 +31,12 @@ Access to jobs and destinations was calculated with Conveyal's regional analysis
 - **Analysis Settings**: Analyses used the following settings: access mode was car, transit modes were all, egress mode was walking, and boundary was the entire region. The analysis outputs were saved as .tiff files.
 
 Using half-mile buffers around each block group, the sum of CDs and mean number of jobs accessible by block group were calculated using ArcGIS's raster analysis tool "Zonal Statistics."
-## Compile Index
-We created a combined index using percent ranks (based on the Centers for Disease Control and Prevention Social Vulnerability Index methodology) with all five categories weighted equally. 
-
+## Calculate Index
+To build a comprehensive understanding of transportation impacts, we created a combined index using percent ranks (based on the Centers for Disease Control and Prevention Social Vulnerability Index methodology) with all five categories weighted equally. 
+1. Filter data by MPO region and calculate rank of value as a percentage (0-1) for each indicator using Excel’s percentrank.inc function
+2. Invert percent rank for five indicators representing negative impacts (those within the safety, affordability, and environment categories)
+3. Sum indicator values for each category (e.g., added all Infrastructure percent rank values together (bike facility coverage, sidewalk coverage, and potential for everyday walking and biking)
+4. Calculate rank of value for five categories (0-1) = Category Rank
+5. Sum five category scores = TIS Score
 ## Build Dashboard
 To visualize the results, we developed a Tableau dashboard hosted here. 
