@@ -1,5 +1,5 @@
 # Transportation Is Supportive 
-This repository contains data and methodology to support a project that analyzes the impact of transportation across the 13 Metropolitan Planning Organizations (MPO) resions. The Transportation Is Supportive (TIS) Score is a relative measure of the transportation system’s support of a high quality of life. A higher TIS denotes a transportation system that supports a higher quality of life. The geography is census block groups (ACS 2020) and unit of analysis is a combined index score.
+This repository contains data and methodology to support a project that analyzes the impact of transportation across the 13 Metropolitan Planning Organizations (MPO) regions. The Transportation Is Supportive (TIS) Score is a relative measure of the transportation system’s support of a high quality of life. A higher TIS denotes a transportation system that supports a higher quality of life. The geography is census block groups (ACS 2020) and unit of analysis is a combined index score.
 ## Prepare Data
 For this analysis, we determined ten indicators that represent five categories of transportation impact: infrastructure, safety, accessibility, affordability, and environment. 
 ### Infrastructure
@@ -34,7 +34,7 @@ To build a comprehensive understanding of transportation impacts, we created a c
 
 The following steps are implemented in [``TIS_build_index.R``](/analysis/TIS_build_index.R).
 1. Filter data by MPO region and calculate rank of value as a percent (0-100%) for each indicator using Excel’s percentrank.inc function
-2. Invert percent rank for the five indicators representing negative impacts (crashes, roadwayrisk, housing cost change, transportation burden, and vehicle-miles traveled)
+2. Invert percent rank for the five indicators representing negative impacts (crashes, roadway risk, housing cost change, transportation burden, and vehicle-miles traveled)
 3. Sum indicator values for each category (e.g., add all Infrastructure percent rank values together)
 4. Calculate rank of value for five categories (0-1))%) = Category Rank
 5. Sum five category scores = TIS Score
