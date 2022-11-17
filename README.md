@@ -25,10 +25,10 @@ This project measures transportation impacts on the environment by vehicle-miles
 ## Process using Conveyal
 Access to jobs and destinations was calculated with Conveyal's regional analysis for a typical weekday in 2022. 
 - **Origins/Destinations**: Origins used for this analysis are the center points of a rectangular grid covering the state (Conveyal's default option). Critical destinations (CDs) were uploaded to Conveyal as free form points. 
-- **Network**: The transportation network in Conveyal was updated using an OpenStreetMap extract and [2022 GTFS files for the MBTA and RTAs](/analysis/conveyal).
-- **Analysis Settings**: Analyses used the following settings: access mode was car, transit modes were all, egress mode was walking, and boundary was the entire region. The analysis outputs were saved as .tiff files.
+- **Network**: The network in Conveyal was updated using an OpenStreetMap extract and [2022 GTFS files](/analysis/conveyal) for the MBTA and RTAs.
+- **Analysis Settings**: Access mode was car, transit modes were all, egress mode was walking, and boundary was the entire region. 
 
-Using half-mile buffers around each block group, the sum of CDs and mean number of jobs accessible by block group were calculated using ArcGIS's raster analysis tool "Zonal Statistics."
+The analysis outputs were saved as .tiff files. Using half-mile buffers around each block group, the sum of CDs and mean number of jobs accessible by block group were calculated using ArcGIS's raster analysis tool "Zonal Statistics."
 ## Calculate Index
 To build a comprehensive understanding of transportation impacts, we created a combined index using percent ranks (based on the Centers for Disease Control and Prevention Social Vulnerability Index methodology) with all five categories weighted equally. The ten indicators were merged into one table using [``TIS_compile_indicators.R``](/analysis/TIS_compile_indicators.R). 
 
