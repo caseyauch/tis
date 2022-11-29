@@ -1,4 +1,4 @@
-indicators <- read_csv("S:/Data and Policy/Casey Analysis/Projects/Beyond Mobility Analysis/Tables/1 Final tables/indicators.csv")
+indicators <- read_csv("./indicators.csv")
 
 #infrastructure
 indicator_rank <- indicators %>%
