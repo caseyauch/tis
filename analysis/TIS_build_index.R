@@ -1,4 +1,4 @@
-indicators <- read_csv("./indicators.csv")
+indicators <- read_csv("indicators.csv")
 
 #infrastructure
 indicator_rank <- indicators %>%
@@ -45,5 +45,5 @@ regions <- tis %>% split(tis$mpo)
 list2env(regions, envir=.GlobalEnv)
 print(tis)
 
-write_excel_csv(tis,"S:/Data and Policy/Casey Analysis/Projects/Beyond Mobility Analysis/Tables/1 Final tables/tis_final.xls")
-write_csv(indicator_rank,"S:/Data and Policy/Casey Analysis/Projects/Beyond Mobility Analysis/Tables/1 Final tables/indicator_rank.csv")
+write_excel_csv(tis,"tis_final_1201.xls")
+write_csv(indicator_rank,"indicator_rank_1201.csv")
